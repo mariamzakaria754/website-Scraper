@@ -2,7 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 # الرابط الأساسي للموقع
 BASE_URL = "https://books.toscrape.com/"
-# function to fetch the webpage
+
 def fetch_page(url):
     """إرسال طلب إلى الموقع وإرجاع كائن BeautifulSoup إذا نجح الطلب."""
     response = requests.get(url)
