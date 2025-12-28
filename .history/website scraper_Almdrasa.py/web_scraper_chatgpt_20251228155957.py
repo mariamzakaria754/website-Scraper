@@ -1,5 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
+# this a new change 2
 # الرابط الأساسي للموقع
 BASE_URL = "https://books.toscrape.com/"
 

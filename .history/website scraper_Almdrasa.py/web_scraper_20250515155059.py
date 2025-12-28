@@ -8,9 +8,9 @@ url = "https://books.toscrape.com/"
 response = requests.get(url)
 if response.status_code == 200:
     # BeautifulSoup نحلل البيانات باستخدام
-   soup = BeautifulSoup(response.content,  "html.parser")
-
-    # استخراج لمعلومات الكتب
+   soup = BeautifulSoup(response.content,  "html.parser") 
+   
+    # استخراج لمعلومات الكتب  
    #باستخدام المحدد
    books = soup.find_all("article")
    print(books[0])
@@ -20,7 +20,7 @@ for book in books:
     rating = book.p["class"][1]
     availability = book.find("p", class_ ="instock availability" ).text.strip()
     price = book.find("p", class_ ="price_color" ).text
-    print(" book titled : " + title + " has a rating of \n"
+    print(" book titled : " + title + " has a rating of \n"  
       + rating + " stars, " + "Availability status is " + availability + ", price " + price )
 else:
     print(f"Failed to load the page. Status code: {response.status_code}")
